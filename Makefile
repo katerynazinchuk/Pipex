@@ -10,7 +10,7 @@ NAME := pipex
 CC := cc
 CFLAGS := -Wall -Wextra -Werror -g -I./include -I./libft
 OBJ_DIR := obj
-SRCS := src/pipex.c src/check_path.c src/utils.c
+SRCS := src/main.c src/pipex.c src/check_path.c src/utils.c 
 
 OBJS = $(SRCS:src/%.c=$(OBJ_DIR)/%.o)
 
