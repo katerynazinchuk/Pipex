@@ -19,7 +19,6 @@ LIBFT := $(LIBFT_DIR)/libft.a
 RM := rm -rf
 
 all: libft $(NAME)
-	@echo "$(GREEN)Compilation successful!$(RESET)"
 
 $(LIBFT):
 	@make -C $(LIBFT_DIR) all
@@ -27,6 +26,7 @@ $(LIBFT):
 $(NAME): $(OBJS) $(LIBFT)
 	@$(CC) $(CFLAGS) $(OBJS) $(LIBFT) -o $(NAME)
 	@echo "$(GREEN)$(BOLD)$(NAME)$(RESET)$(GREEN) created!$(RESET)"
+	@echo "$(GREEN)Compilation successful!$(RESET)"
 
 $(OBJ_DIR)/%.o: src/%.c | $(OBJ_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
